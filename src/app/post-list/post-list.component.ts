@@ -14,12 +14,9 @@ export class PostListComponent {
   constructor(private postService: PostService) {}
 
   ngOnInit(): void {
-    this.loadPosts();
-  }
-
-  loadPosts(): void {
     this.postService.getPosts().subscribe(posts => {
       this.posts = posts;
     })
   }
+
 }
