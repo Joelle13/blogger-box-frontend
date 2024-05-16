@@ -9,6 +9,8 @@ import {PostService} from "./services/post.service";
 import {PostListComponent} from "./post-list/post-list.component";
 import {PostListItemComponent} from "./post-list-item/post-list-item.component";
 import { AddPostFormComponent } from './add-post-form/add-post-form.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {CategoryService} from "./services/category.service";
 
 @NgModule({
   declarations: [
@@ -21,9 +23,10 @@ import { AddPostFormComponent } from './add-post-form/add-post-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [PostService],
+  providers: [PostService,CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
