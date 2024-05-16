@@ -4,6 +4,12 @@ export interface Category {
 }
 
 export type CategoryCreateInput=Omit<Category, "id">;
+export type CategoryCreateInputWithIsActive = Omit<Category, "id">&{isActive: boolean;};
+const category:
+  CategoryCreateInputWithIsActive = {
+  name:'Health',
+  isActive:true,
+};
 
 const CATEGORIES = [
   {

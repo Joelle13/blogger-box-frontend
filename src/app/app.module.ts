@@ -8,13 +8,15 @@ import {HttpClientModule} from "@angular/common/http";
 import {PostService} from "./services/post.service";
 import {PostListComponent} from "./post-list/post-list.component";
 import {PostListItemComponent} from "./post-list-item/post-list-item.component";
+import { AddPostFormComponent } from './add-post-form/add-post-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
     PostListComponent,
-    PostListItemComponent
+    PostListItemComponent,
+    AddPostFormComponent
   ],
   imports: [
     BrowserModule,
