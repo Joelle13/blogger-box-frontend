@@ -15,7 +15,7 @@ export class PostListComponent {
 
   ngOnInit(): void {
     this.postService.getPosts().subscribe(posts => {
-      this.posts = posts;
+      this.posts = posts.reverse();
     })
   }
 
